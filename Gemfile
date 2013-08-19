@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 
 gem 'rails', '4.0.0'
+gem 'debugger'
 gem 'devise'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
@@ -12,6 +13,7 @@ gem 'jbuilder', '~> 1.2'
 
 group :development, :test do
 	gem 'sqlite3'
+	gem 'quiet_assets'
 end
 
 group :production do

@@ -8,7 +8,14 @@
 
 
 
-Assessment.create name: "Communicating with influence", description: "Engages and inspires others through clear and persuasive communication."
-Assessment.create name: "Group interaction", description: "Group interaction to show supportiveness in a group setting."
-Assessment.create name: "Public Speaking", description: "A 2 minute presentation given on the spot."
-Assessment.create name: "Critical Thinking", description: "Uses a given scenario and to give a short analysis to show critical thinking skills."
+activity = Activity.create title: "Group Chat", description: "Chatting in a group"
+
+assessor = Assessor.create first_name: "Samson", last_name: "Smith", email: "samson@example.com"
+
+student = Student.create first_name: "Bill", last_name: "Jones", email: "bill@jones.com"
+
+Assessment.create name: "Communicating with influence", description: "Engages and inspires others through clear and persuasive communication.", activity: activity, assessor: assessor
+
+Capability.create name: "Non-Verbal Communication", description: "The student can communicate effectively with others.", activity: activity
+
+StudentAssessment.create student: student, assessment: assessment

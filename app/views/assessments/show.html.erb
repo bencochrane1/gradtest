@@ -1,20 +1,32 @@
 <h1>Assessment 1: Group Thinking</h1>
 
 
-
-
-
-
-
-
-
-
 <div class="row">
   <div class="twelve columns">
     <h2>This assessment will test the candidates ability to voice a well constructed opinion and share it in a group situation.</h2><br/><br/>
-    <p class="download"><a class="small blue nice button src-download" href="#">Assessor: Zoe</a></p>
+    <p class="download"><a class="small blue nice button src-download" href="#">Assessor:</a><%= @assessor.first_name %></p>
     <br/><br/>
-    <p class="download"><a class="small blue nice button src-download" href="#">Student: Samantha</a></p>
+    <p class="download"><a class="small blue nice button src-download" href="#">Student:</a><%= @student.first_name %> <%= @student.last_name %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th width="150">Title</th>
+      <th width="150">Year Released</th>
+      <th width="150"></th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><%= @assessment %></td>
+        <td><%= link_to movie.year_released, movie_path(movie.id) %></td>
+        <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
+      </tr>
+  </tbody>
+</table>
+
+
+
 
 
 
